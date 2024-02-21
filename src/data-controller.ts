@@ -10,8 +10,11 @@ function generateProductHTML(product: Product): string {
 }
 
 function renderProducts(prods: Product[]): void {
-    // your code
+   
 }
+
+// Call renderProducts on page load with all products
+renderProducts(products);
 
 function getByCategory(category: string): void {
     // your code
