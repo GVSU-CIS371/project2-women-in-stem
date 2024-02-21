@@ -15,10 +15,15 @@ function renderProducts(prods: Product[]): void {
 
 function getByCategory(category: string): void {
     // your code
+    const temp = products.filter((x) => x.category == category);
+    renderProducts(temp);
 }
 
 function getByRating(minRating: number): void {
     // your code
+    const temp = products.filter((x) => x.rating >= minRating);
+    renderProducts(temp);
+    
 }
 
 export { renderProducts, getByCategory, getByRating };
