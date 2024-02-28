@@ -10,7 +10,19 @@ function generateProductHTML(product: Product): string {
 }
 
 function renderProducts(prods: Product[]): void {
+    // get the main container element
+   const mainContainer = document.getElementById("main-container");
    
+   // check to make sure that the main container exists
+   if (!mainContainer) {
+    console.error("main container not found");
+    return;
+   }
+
+   // generate HTML for each product and join into single string
+   const productsHTML = prods.map(product => generateProductHTML(product)).join('');
+   // set the inner html of main container to generated products html
+   mainContainer.innerHTML = productsHTML;
 }
 
 // Call renderProducts on page load with all products
